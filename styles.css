@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+
+/*header*/
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    width: calc(100% - 60px);
+    height: 100px;
+    z-index: 1;
+}
+header .material-symbols-outlined{
+    font-size: 35px;
+    cursor: pointer;
+}
+header > .logo{
+    display: flex;
+    align-items: center;
+    padding: 15px;  
+}
+header > .logo > span{
+    margin-right: 20px;
+    padding: 15px;
+    border-radius: 40px;
+}
+header > .logo > span:hover{
+    background-color: rgb(238, 238, 238);
+}
+header > .logo > img{
+    width: 150px;
+    cursor: pointer;
+}
+header > .logo > sup{
+    margin-left: 5px;
+    align-self: flex-start;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+header > .search{
+    display: flex;
+    align-items: center;
+}
+header > .search > div{
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+header > .search > div > input{
+    font-size: 18px;
+    padding: 13px;
+    width: calc(1000px - 40px);
+    border:1px solid #b4b1b1;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+}
+header > .search > div > input:focus-visible {
+    outline: none;
+    border: 1px solid #3E67D4;
+    box-shadow: inset 0 5px 5px -5px #333;
+}
+header > .search > div > span{
+    border: 1px solid black;
+    padding: 9.5px 28px;
+    padding-bottom: 10px;
+    border:1px solid #b4b1b1;
+    border-left: none;
+    background-color: #F8F8F8;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
+header > .search > div > span:hover{
+    background-color: rgb(223, 223, 223);
+}
+
+header > .signin{
+    display: flex;
+    align-items: center;
+}
+header > .signin > span{
+    margin-right: 20px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 30px;
+}
+header > .signin > span:hover{
+    background-color: rgb(238, 238, 238);
+}
+header > .signin > div{
+    display: flex;
+    align-items: center;
+    color: #3E67D4;
+    padding: 5px 8px;
+    border:1px solid #b4b1b1;
+    border-radius: 40px;
+    cursor: pointer;
+}
+header > .signin > div:hover{
+    background-color: #bee0fd;
+    border-color: #bee0fd;
+}
+header > .signin > div > span{
+    margin-right: 10px;
+}
+header > .signin > div > button{
+    border: none;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 500;
+    color: #3E67D4;
+}
+header > .signin > div:hover > button{
+    background-color: #bee0fd;
+}
+
+
+
+/* page */
+.page{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+}
+
+/* template*/
+.template{
+    width: calc(17% - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 25px 35px;
+    overflow-y: auto;
+}
+
+.template > .div1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    margin-bottom: 5px;
+}
+.template > .div1 > div{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 10px;
+}
+.template > .div1 > div:hover{
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+.template > .div1 > div > span{
+    font-size: 32px;
+    margin-right: 50px;
+}
+.template > .div1 > div > span ~ span{
+    font-size: 20px;
+    white-space: nowrap;
+}
+.explore{
+    font-size: 30px;
+}
+.div2{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+.div2 > div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.div2 > div > a{
+    margin-right: 10px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+.div2 .footer{
+    color: rgb(149, 149, 149);
+}
+
+
+/* page-container  */
+.page-container{
+    width: 83%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Categories */
+.categories{
+    width: calc(100% - 40px);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    overflow-x: scroll;
+    position: sticky;
+    top:100px;
+    background-color: white;
+}
+.categories::-webkit-scrollbar{
+    height: 10px;
+    cursor: pointer;
+}
+.categories::-webkit-scrollbar-thumb {
+    background-color: #c6c5c5 ; 
+    border-radius: 10px;
+}
+.categories > .chip{
+    background-color: #e8e8e8;
+    color: black;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    white-space: nowrap;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* video-container*/
+.video-container{
+    width: calc(100% - 80px);
+    height: auto;
+    padding: 70px 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.video{
+    width: 500px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.video > .thumbnail{
+    width: calc(100% - 20px);
+    height: 240px;
+    background-image: url(./images/thumbnail.jpg);
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+.video > .thumbnail:hover{
+    border-radius: 0;
+}
+.video > div{
+    display: flex;
+    align-items: flex-start;
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+.video > div > .channel-logo{
+    width: calc(70px - 10px);
+    height: 55px;
+    background-image: url(./images/ch-logo.avif);
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    padding: 5px;
+    margin-right: 20px;
+}
+.video > div > div{
+    width: 68%;
+}
+.video > div > div > .title{
+    font-size: 20px;
+}
+.video > div > div > .channel-name{
+    font-weight: 500;
+}
+.video > div > span{
+    display: none;
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.video > div > span:hover{
+    background-color: rgb(238, 238, 238);
+}
+.video > div:hover > span{
+    display: inline;
+}
+
